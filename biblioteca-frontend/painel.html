@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel da Biblioteca</title>
+    <link rel="stylesheet" href="css/painel.css">
+</head>
+
+<body>
+    <h1>📚 Painel da Biblioteca</h1>
+
+    <div class="botoes">
+        <button onclick="verEmprestimos()">📖 Ver Empréstimos</button>
+        <button onclick="verLivros()">📚 Ver Livros</button>
+        <button onclick="verAlunos()">👨‍🎓 Ver Alunos</button>
+        <button onclick="mostrarFormularioLivro()">➕📚 Adicionar Livro</button>
+        <button onclick="formAdicionarEmprestimo()">➕📖 Adicionar Empréstimo</button>
+        <button onclick="mostrarFormularioAluno()">➕👨‍🎓 Cadastrar Aluno</button>
+    </div>
+
+    <menu class="menu">
+        <div id="emprestimos-container" class="container"></div>
+        <div id="livros-container" class="container"></div>
+        <div id="alunos-container" class="container"></div>
+    </menu>
+
+
+    <div id="form-livro-container" class="form-container">
+        <h2>Adicionar Livro</h2>
+        <form id="livro-form">
+            <input type="text" id="titulo" placeholder="Título" required><br>
+            <input type="text" id="autor" placeholder="Autor" required><br>
+            <input type="text" id="categoria" placeholder="Categoria" required><br>
+            <input type="text" id="editora" placeholder="Editora" required><br>
+            <button class="btn" type="submit">✅ Cadastrar Livro</button>
+        </form>
+    </div>
+
+    <div id="form-emprestimo-container" class="form-container">
+        <h2>Adicionar Empréstimo</h2>
+        <form id="emprestimo-form">
+            <input type="text" id="ra" placeholder="RA do Aluno" required>
+            <input type="number" id="livroId" placeholder="ID do Livro" required>
+            <input type="date" id="dataRetirada" required>
+            <input type="date" id="dataEntrega" required>
+            <button type="submit">Cadastrar Empréstimo</button>
+        </form>
+    </div>
+
+    <div id="form-alunos-container" class="form-container">
+        <h2>Gerenciar Alunos</h2>
+        <form id="aluno-form">
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="telefone" placeholder="Telefone" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <input type="date" name="dataNascimento" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <script src="js/painel.js"></script>
+</body>
+
+</html>
